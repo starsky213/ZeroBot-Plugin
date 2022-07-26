@@ -55,10 +55,10 @@ import (
 	//                          vvvvvvvvvvvvvv                          //
 	//                               vvvv                               //
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ai_false"      // 服务器监控
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aiwife"        // 随机老婆
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/b14"           // base16384加解密
-	
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ai_false" // 服务器监控
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aiwife"   // 随机老婆
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/b14"      // base16384加解密
+
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili"      // b站相关
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/book_review"   // 哀伤雪刃吧推书记录
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/cangtoushi"    // 藏头诗
@@ -225,7 +225,7 @@ func init() {
 
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
-		NickName:      append([]string{*adana}, "小喵", "喵酱","傻喵"),
+		NickName:      append([]string{*adana}, "小喵", "喵酱", "傻喵"),
 		CommandPrefix: *prefix,
 		SuperUsers:    sus,
 		Driver:        []zero.Driver{config.W[0]},
